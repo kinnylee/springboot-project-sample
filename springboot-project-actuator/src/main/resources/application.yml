@@ -1,0 +1,24 @@
+server:
+  port: 7082
+
+## springboot 2.0.1之后需要配置
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    jmx:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+    shutdown:
+      enabled: true #可发送post请求到/actuator/shutdown关闭程序
+
+info:
+  build-info:
+    artifact: @project.artifactId@
+    name: @project.name@
+    description: @project.description@
+    version: @project.version@

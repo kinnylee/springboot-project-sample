@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.kinnylee</groupId>
+	<artifactId>springboot-project</artifactId>
+	<version>${parent.version}</version>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>springboot-project-parent</module>
+		<module>springboot-project-web</module>
+		<module>springboot-project-security</module>
+		<module>springboot-project-actuator</module>
+		<module>springboot-project-shell</module>
+		<!--<module>springboot-project-war</module>-->
+		<module>springboot-project-admin-server</module>
+		<module>springboot-project-admin-client</module>
+		<module>springboot-project-mybatis</module>
+	</modules>
+</project>

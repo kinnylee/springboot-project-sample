@@ -1,0 +1,15 @@
+
+spring:
+  data:
+    elasticsearch:
+      cluster-name: GCR-ES
+      cluster-nodes: 192.168.144.26:9300,192.168.144.23:9300,192.168.144.29:9300,192.168.144.35:9300
+server:
+  port: 7075
+management:
+  health:
+    elasticsearch:
+      response-timeout: 1ms
+logging:
+  level:
+    root: debug

@@ -1,0 +1,12 @@
+server:
+  port: 8001
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://192.168.144.52:3306/test?useUnicode=true&characterEncoding=utf8&useSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+    username: gsup
+    password: gsup-test
+mybatis:
+  type-aliases-package: com.kinnylee.entity
+  mapper-locations: classpath:com/kinnylee/mapper/**/*.xml

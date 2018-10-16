@@ -1,0 +1,16 @@
+# 配置文件加载顺序，参考
+# https://blog.csdn.net/J080624/article/details/80508606
+# https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-external-config
+# 全局配置，最高优先级
+management:
+  endpoint:
+    health:
+      show-details: always
+  health:
+#logging:
+#  level:
+#    root: debug
+spring:
+  mail:
+    default-encoding: UTF-8
+    host: smtp.exmail.qq.com

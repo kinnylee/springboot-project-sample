@@ -1,0 +1,14 @@
+server:
+  port: 7776
+
+spring:
+  boot:
+    admin:
+      client:
+        url: "http://localhost:7777"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        inclue: "*"
