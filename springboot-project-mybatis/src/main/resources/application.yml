@@ -3,7 +3,7 @@ server:
 spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:mysql://192.168.144.52:3306/test?useUnicode=true&characterEncoding=utf8&useSSL=false
+    jdbc-url: jdbc:mysql://192.168.144.52:3306/test?useUnicode=true&characterEncoding=utf8&useSSL=false
     driver-class-name: com.mysql.jdbc.Driver
     username: gsup
     password: gsup-test

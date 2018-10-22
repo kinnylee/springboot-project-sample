@@ -4,55 +4,48 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.kinnylee</groupId>
-	<artifactId>springboot-project-parent</artifactId>
-	<version>0.0.1</version>
-	<packaging>pom</packaging>
+	<artifactId>springboot-project-dao</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 
-	<name>springboot-project-parent</name>
+	<name>springboot-project-dao</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.0.5.RELEASE</version>
+		<groupId>com.kinnylee</groupId>
+		<artifactId>springboot-project-parent</artifactId>
+		<version>0.0.1</version>
 	</parent>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<springboot.start.version>2.0.5.RELEASE</springboot.start.version>
 		<java.version>1.8</java.version>
-		<mybatis.starter.version>1.3.2</mybatis.starter.version>
-		<mysql.version>5.1.47</mysql.version>
 	</properties>
 
 	<dependencies>
 		<dependency>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-starter</artifactId>
+			<version>1.3.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
-			<version>${springboot.start.version}</version>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid</artifactId>
+			<version>1.1.6</version>
 		</dependency>
 	</dependencies>
-
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>org.mybatis.spring.boot</groupId>
-				<artifactId>mybatis-spring-boot-starter</artifactId>
-				<version>${mybatis.starter.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>mysql</groupId>
-				<artifactId>mysql-connector-java</artifactId>
-				<version>${mysql.version}</version>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
-
-	<distributionManagement>
-
-	</distributionManagement>
 
 	<build>
 		<plugins>

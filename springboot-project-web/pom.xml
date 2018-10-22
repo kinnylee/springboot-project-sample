@@ -3,9 +3,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.kinnylee</groupId>
 	<artifactId>springboot-project-web</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<packaging>jar</packaging>
 
 	<name>springboot-project-web</name>
@@ -15,6 +14,7 @@
 		<groupId>com.kinnylee</groupId>
 		<artifactId>springboot-project-parent</artifactId>
 		<version>0.0.1</version>
+		<relativePath>../springboot-project-parent/pom.xml</relativePath>
 	</parent>
 
 	<properties>
@@ -26,8 +26,8 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.kinnylee</groupId>
-			<artifactId>springboot-project-dao</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<artifactId>springboot-project-dao-customconfig</artifactId>
+			<version>0.0.1</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -44,16 +44,12 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<version>1.5.2.RELEASE</version>
+		</dependency>
 	</dependencies>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
-
-
 </project>
