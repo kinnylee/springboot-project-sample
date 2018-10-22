@@ -26,7 +26,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.kinnylee</groupId>
-			<artifactId>springboot-project-dao-customconfig</artifactId>
+			<artifactId>springboot-project-dao-config</artifactId>
 			<version>0.0.1</version>
 		</dependency>
 		<dependency>

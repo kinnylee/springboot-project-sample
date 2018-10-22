@@ -18,7 +18,7 @@
 		<!--<module>springboot-project-admin-server</module>-->
 		<!--<module>springboot-project-admin-client</module>-->
 		<!--<module>springboot-project-mybatis</module>-->
-		<module>springboot-project-dao-customconfig</module>
+		<module>springboot-project-dao-config</module>
 		<!--<module>springboot-project-dao-annotation</module>-->
 	</modules>
 </project>
