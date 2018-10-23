@@ -1,9 +1,0 @@
-com\kinnylee\config\MybatisConfig.class
-com\kinnylee\dao\base\UserMapper.class
-com\kinnylee\entity\UserExample$Criteria.class
-com\kinnylee\entity\UserExample$GeneratedCriteria.class
-com\kinnylee\entity\UserExample.class
-com\kinnylee\SpringbootProjectDaoCustomconfigApplication.class
-com\kinnylee\entity\UserExample$Criterion.class
-com\kinnylee\entity\User.class
-com\kinnylee\dao\custom\UserDao.class
