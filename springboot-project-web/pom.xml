@@ -26,6 +26,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.kinnylee</groupId>
+			<!--<artifactId>springboot-project-dao-annotation</artifactId>-->
 			<artifactId>springboot-project-dao-config</artifactId>
 			<version>0.0.1</version>
 		</dependency>
@@ -51,5 +52,6 @@
 			<artifactId>spring-boot-starter-tomcat</artifactId>
 			<version>1.5.2.RELEASE</version>
 		</dependency>
+
 	</dependencies>
 </project>

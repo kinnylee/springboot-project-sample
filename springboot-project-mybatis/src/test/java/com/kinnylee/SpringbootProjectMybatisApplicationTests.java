@@ -1,4 +1,4 @@
-package com.glodon.kinnylee;
+package com.kinnylee;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

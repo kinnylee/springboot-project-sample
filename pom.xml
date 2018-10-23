@@ -5,7 +5,7 @@
 
 	<groupId>com.kinnylee</groupId>
 	<artifactId>springboot-project</artifactId>
-	<version>${parent.version}</version>
+	<version>0.0.1</version>
 	<packaging>pom</packaging>
 
 	<modules>
@@ -19,6 +19,6 @@
 		<!--<module>springboot-project-admin-client</module>-->
 		<!--<module>springboot-project-mybatis</module>-->
 		<module>springboot-project-dao-config</module>
-		<!--<module>springboot-project-dao-annotation</module>-->
+		<module>springboot-project-dao-annotation</module>
 	</modules>
 </project>

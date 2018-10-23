@@ -4,7 +4,8 @@
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>springboot-project-dao-annotation</artifactId>
 	<packaging>jar</packaging>
-	<name>springboot-project-dao</name>
+	<version>0.0.1</version>
+	<name>springboot-project-dao-annotation</name>
 	<description>使用注解配置dao数据源</description>
 
 	<parent>
