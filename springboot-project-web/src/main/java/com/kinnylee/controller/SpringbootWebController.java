@@ -1,8 +1,12 @@
 package com.kinnylee.controller;
 
 import com.kinnylee.dao.custom.UserDao;
+import com.kinnylee.entity.User;
+import com.kinnylee.enums.Sex;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -22,7 +26,15 @@ public class SpringbootWebController {
   private UserDao userDao;
 
   @GetMapping("/test")
-  public Object getUser(){
-    return userDao.selectByPrimaryKey(1);
+  public Object getUser(@RequestParam Integer id){
+    return userDao.selectByPrimaryKey(id);
+  }
+
+  @PostMapping("/add")
+  public Object addUser(){
+    User user = new User();
+    user.setName("test");
+    user.setSex(Sex.FEMALE);
+    return userDao.insertSelective(user);
   }
 }
