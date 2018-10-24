@@ -36,6 +36,8 @@
         typeHandler="org.apache.ibatis.type.EnumOrdinalTypeHandler"/>
       <columnOverride column="province" javaType="com.kinnylee.enums.Province"
         typeHandler="org.apache.ibatis.type.EnumTypeHandler"/>
+      <columnOverride column="status" javaType="com.kinnylee.enums.UserStatus"
+        typeHandler="com.kinnylee.typehandler.EnumStatusHandler"/>
     </table>
 
   </context>

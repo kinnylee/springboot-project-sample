@@ -2,6 +2,7 @@ package com.kinnylee.entity;
 
 import com.kinnylee.enums.Province;
 import com.kinnylee.enums.Sex;
+import com.kinnylee.enums.UserStatus;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -70,6 +71,8 @@ public class UserExample {
 
         protected List<Criterion> provinceCriteria;
 
+        protected List<Criterion> statusCriteria;
+
         protected List<Criterion> allCriteria;
 
         protected List<Criterion> criteria;
@@ -79,6 +82,7 @@ public class UserExample {
             criteria = new ArrayList<Criterion>();
             sexCriteria = new ArrayList<Criterion>();
             provinceCriteria = new ArrayList<Criterion>();
+            statusCriteria = new ArrayList<Criterion>();
         }
 
         public List<Criterion> getSexCriteria() {
@@ -121,10 +125,31 @@ public class UserExample {
             allCriteria = null;
         }
 
+        public List<Criterion> getStatusCriteria() {
+            return statusCriteria;
+        }
+
+        protected void addStatusCriterion(String condition, Object value, String property) {
+            if (value == null) {
+                throw new RuntimeException("Value for " + property + " cannot be null");
+            }
+            statusCriteria.add(new Criterion(condition, value, "com.kinnylee.typehandler.EnumStatusHandler"));
+            allCriteria = null;
+        }
+
+        protected void addStatusCriterion(String condition, UserStatus value1, UserStatus value2, String property) {
+            if (value1 == null || value2 == null) {
+                throw new RuntimeException("Between values for " + property + " cannot be null");
+            }
+            statusCriteria.add(new Criterion(condition, value1, value2, "com.kinnylee.typehandler.EnumStatusHandler"));
+            allCriteria = null;
+        }
+
         public boolean isValid() {
             return criteria.size() > 0
                 || sexCriteria.size() > 0
-                || provinceCriteria.size() > 0;
+                || provinceCriteria.size() > 0
+                || statusCriteria.size() > 0;
         }
 
         public List<Criterion> getAllCriteria() {
@@ -133,6 +158,7 @@ public class UserExample {
                 allCriteria.addAll(criteria);
                 allCriteria.addAll(sexCriteria);
                 allCriteria.addAll(provinceCriteria);
+                allCriteria.addAll(statusCriteria);
             }
             return allCriteria;
         }
@@ -422,6 +448,66 @@ public class UserExample {
 
         public Criteria andProvinceNotBetween(Province value1, Province value2) {
             addProvinceCriterion("province not between", value1, value2, "province");
+            return (Criteria) this;
+        }
+
+        public Criteria andStatusIsNull() {
+            addCriterion("status is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andStatusIsNotNull() {
+            addCriterion("status is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andStatusEqualTo(UserStatus value) {
+            addStatusCriterion("status =", value, "status");
+            return (Criteria) this;
+        }
+
+        public Criteria andStatusNotEqualTo(UserStatus value) {
+            addStatusCriterion("status <>", value, "status");
+            return (Criteria) this;
+        }
+
+        public Criteria andStatusGreaterThan(UserStatus value) {
+            addStatusCriterion("status >", value, "status");
+            return (Criteria) this;
+        }
+
+        public Criteria andStatusGreaterThanOrEqualTo(UserStatus value) {
+            addStatusCriterion("status >=", value, "status");
+            return (Criteria) this;
+        }
+
+        public Criteria andStatusLessThan(UserStatus value) {
+            addStatusCriterion("status <", value, "status");
+            return (Criteria) this;
+        }
+
+        public Criteria andStatusLessThanOrEqualTo(UserStatus value) {
+            addStatusCriterion("status <=", value, "status");
+            return (Criteria) this;
+        }
+
+        public Criteria andStatusIn(List<UserStatus> values) {
+            addStatusCriterion("status in", values, "status");
+            return (Criteria) this;
+        }
+
+        public Criteria andStatusNotIn(List<UserStatus> values) {
+            addStatusCriterion("status not in", values, "status");
+            return (Criteria) this;
+        }
+
+        public Criteria andStatusBetween(UserStatus value1, UserStatus value2) {
+            addStatusCriterion("status between", value1, value2, "status");
+            return (Criteria) this;
+        }
+
+        public Criteria andStatusNotBetween(UserStatus value1, UserStatus value2) {
+            addStatusCriterion("status not between", value1, value2, "status");
             return (Criteria) this;
         }
     }

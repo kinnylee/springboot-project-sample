@@ -7,5 +7,7 @@
       javaType="com.kinnylee.enums.Sex"/>
     <typeHandler handler="org.apache.ibatis.type.EnumTypeHandler"
       javaType="com.kinnylee.enums.Province"/>
+    <typeHandler handler="com.kinnylee.typehandler.EnumStatusHandler"
+      javaType="com.kinnylee.enums.UserStatus"/>
   </typeHandlers>
 </configuration>

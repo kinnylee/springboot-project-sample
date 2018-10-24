@@ -2,6 +2,7 @@ package com.kinnylee.entity;
 
 import com.kinnylee.enums.Province;
 import com.kinnylee.enums.Sex;
+import com.kinnylee.enums.UserStatus;
 
 public class User {
     private Integer id;
@@ -11,6 +12,8 @@ public class User {
     private Sex sex;
 
     private Province province;
+
+    private UserStatus status;
 
     public Integer getId() {
         return id;
@@ -42,5 +45,13 @@ public class User {
 
     public void setProvince(Province province) {
         this.province = province;
+    }
+
+    public UserStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(UserStatus status) {
+        this.status = status;
     }
 }
