@@ -17,30 +17,6 @@ public enum  Sex {
    * 女
    */
   FEMALE,
-//  /**
-//   * 男
-//   */
-//  MALE(0, "male"),
-//
-//  /**
-//   * 女
-//   */
-//  FEMALE(1, "female");
-//
-//  private int value;
-//  private String name;
-//
-//  Sex(int value, String name){
-//    this.value = value;
-//    this.name = name;
-//  }
-//
-//  public int getValue(){
-//    return this.value;
-//  }
-//
-//  public String getNmae(){
-//    return this.name;
-//  }
+
 }
 
