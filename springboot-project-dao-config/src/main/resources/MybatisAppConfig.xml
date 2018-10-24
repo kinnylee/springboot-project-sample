@@ -3,6 +3,7 @@
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
   <typeHandlers>
-
+    <typeHandler handler="org.apache.ibatis.type.EnumOrdinalTypeHandler"
+      javaType="com.kinnylee.enums.Sex"/>
   </typeHandlers>
 </configuration>

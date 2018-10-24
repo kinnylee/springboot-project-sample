@@ -1,9 +1,13 @@
 package com.kinnylee.entity;
 
+import com.kinnylee.enums.Sex;
+
 public class User {
     private Integer id;
 
     private String name;
+
+    private Sex sex;
 
     public Integer getId() {
         return id;
@@ -19,5 +23,13 @@ public class User {
 
     public void setName(String name) {
         this.name = name == null ? null : name.trim();
+    }
+
+    public Sex getSex() {
+        return sex;
+    }
+
+    public void setSex(Sex sex) {
+        this.sex = sex;
     }
 }
