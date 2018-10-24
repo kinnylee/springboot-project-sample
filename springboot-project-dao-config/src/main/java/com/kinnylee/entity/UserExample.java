@@ -1,5 +1,6 @@
 package com.kinnylee.entity;
 
+import com.kinnylee.enums.Province;
 import com.kinnylee.enums.Sex;
 import java.util.ArrayList;
 import java.util.List;
@@ -67,6 +68,8 @@ public class UserExample {
     protected abstract static class GeneratedCriteria {
         protected List<Criterion> sexCriteria;
 
+        protected List<Criterion> provinceCriteria;
+
         protected List<Criterion> allCriteria;
 
         protected List<Criterion> criteria;
@@ -75,6 +78,7 @@ public class UserExample {
             super();
             criteria = new ArrayList<Criterion>();
             sexCriteria = new ArrayList<Criterion>();
+            provinceCriteria = new ArrayList<Criterion>();
         }
 
         public List<Criterion> getSexCriteria() {
@@ -97,9 +101,30 @@ public class UserExample {
             allCriteria = null;
         }
 
+        public List<Criterion> getProvinceCriteria() {
+            return provinceCriteria;
+        }
+
+        protected void addProvinceCriterion(String condition, Object value, String property) {
+            if (value == null) {
+                throw new RuntimeException("Value for " + property + " cannot be null");
+            }
+            provinceCriteria.add(new Criterion(condition, value, "org.apache.ibatis.type.EnumTypeHandler"));
+            allCriteria = null;
+        }
+
+        protected void addProvinceCriterion(String condition, Province value1, Province value2, String property) {
+            if (value1 == null || value2 == null) {
+                throw new RuntimeException("Between values for " + property + " cannot be null");
+            }
+            provinceCriteria.add(new Criterion(condition, value1, value2, "org.apache.ibatis.type.EnumTypeHandler"));
+            allCriteria = null;
+        }
+
         public boolean isValid() {
             return criteria.size() > 0
-                || sexCriteria.size() > 0;
+                || sexCriteria.size() > 0
+                || provinceCriteria.size() > 0;
         }
 
         public List<Criterion> getAllCriteria() {
@@ -107,6 +132,7 @@ public class UserExample {
                 allCriteria = new ArrayList<Criterion>();
                 allCriteria.addAll(criteria);
                 allCriteria.addAll(sexCriteria);
+                allCriteria.addAll(provinceCriteria);
             }
             return allCriteria;
         }
@@ -326,6 +352,76 @@ public class UserExample {
 
         public Criteria andSexNotBetween(Sex value1, Sex value2) {
             addSexCriterion("sex not between", value1, value2, "sex");
+            return (Criteria) this;
+        }
+
+        public Criteria andProvinceIsNull() {
+            addCriterion("province is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andProvinceIsNotNull() {
+            addCriterion("province is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andProvinceEqualTo(Province value) {
+            addProvinceCriterion("province =", value, "province");
+            return (Criteria) this;
+        }
+
+        public Criteria andProvinceNotEqualTo(Province value) {
+            addProvinceCriterion("province <>", value, "province");
+            return (Criteria) this;
+        }
+
+        public Criteria andProvinceGreaterThan(Province value) {
+            addProvinceCriterion("province >", value, "province");
+            return (Criteria) this;
+        }
+
+        public Criteria andProvinceGreaterThanOrEqualTo(Province value) {
+            addProvinceCriterion("province >=", value, "province");
+            return (Criteria) this;
+        }
+
+        public Criteria andProvinceLessThan(Province value) {
+            addProvinceCriterion("province <", value, "province");
+            return (Criteria) this;
+        }
+
+        public Criteria andProvinceLessThanOrEqualTo(Province value) {
+            addProvinceCriterion("province <=", value, "province");
+            return (Criteria) this;
+        }
+
+        public Criteria andProvinceLike(Province value) {
+            addProvinceCriterion("province like", value, "province");
+            return (Criteria) this;
+        }
+
+        public Criteria andProvinceNotLike(Province value) {
+            addProvinceCriterion("province not like", value, "province");
+            return (Criteria) this;
+        }
+
+        public Criteria andProvinceIn(List<Province> values) {
+            addProvinceCriterion("province in", values, "province");
+            return (Criteria) this;
+        }
+
+        public Criteria andProvinceNotIn(List<Province> values) {
+            addProvinceCriterion("province not in", values, "province");
+            return (Criteria) this;
+        }
+
+        public Criteria andProvinceBetween(Province value1, Province value2) {
+            addProvinceCriterion("province between", value1, value2, "province");
+            return (Criteria) this;
+        }
+
+        public Criteria andProvinceNotBetween(Province value1, Province value2) {
+            addProvinceCriterion("province not between", value1, value2, "province");
             return (Criteria) this;
         }
     }

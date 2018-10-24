@@ -34,6 +34,8 @@
       <generatedKey column="id" sqlStatement="MySql" identity="true"/>
       <columnOverride column="sex" javaType="com.kinnylee.enums.Sex"
         typeHandler="org.apache.ibatis.type.EnumOrdinalTypeHandler"/>
+      <columnOverride column="province" javaType="com.kinnylee.enums.Province"
+        typeHandler="org.apache.ibatis.type.EnumTypeHandler"/>
     </table>
 
   </context>

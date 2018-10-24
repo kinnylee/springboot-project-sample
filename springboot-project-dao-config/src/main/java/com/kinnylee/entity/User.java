@@ -1,5 +1,6 @@
 package com.kinnylee.entity;
 
+import com.kinnylee.enums.Province;
 import com.kinnylee.enums.Sex;
 
 public class User {
@@ -8,6 +9,8 @@ public class User {
     private String name;
 
     private Sex sex;
+
+    private Province province;
 
     public Integer getId() {
         return id;
@@ -31,5 +34,13 @@ public class User {
 
     public void setSex(Sex sex) {
         this.sex = sex;
+    }
+
+    public Province getProvince() {
+        return province;
+    }
+
+    public void setProvince(Province province) {
+        this.province = province;
     }
 }

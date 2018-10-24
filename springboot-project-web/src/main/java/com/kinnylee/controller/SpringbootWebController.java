@@ -2,6 +2,7 @@ package com.kinnylee.controller;
 
 import com.kinnylee.dao.custom.UserDao;
 import com.kinnylee.entity.User;
+import com.kinnylee.enums.Province;
 import com.kinnylee.enums.Sex;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -35,6 +36,7 @@ public class SpringbootWebController {
     User user = new User();
     user.setName("test");
     user.setSex(Sex.FEMALE);
+    user.setProvince(Province.BJ);
     return userDao.insertSelective(user);
   }
 }
