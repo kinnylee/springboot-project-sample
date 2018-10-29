@@ -20,5 +20,7 @@
 		<!--<module>springboot-project-mybatis</module>-->
 		<module>springboot-project-dao-config</module>
 		<module>springboot-project-dao-annotation</module>
-	</modules>
+		<module>springboot-project-redis</module>
+    <module>jwtspringbootstarter</module>
+  </modules>
 </project>
