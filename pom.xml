@@ -10,7 +10,7 @@
 
 	<modules>
 		<module>springboot-project-parent</module>
-		<module>springboot-project-web</module>
+		<!--<module>springboot-project-web</module>-->
 		<!--<module>springboot-project-security</module>-->
 		<!--<module>springboot-project-actuator</module>-->
 		<!--<module>springboot-project-shell</module>-->
@@ -18,9 +18,10 @@
 		<!--<module>springboot-project-admin-server</module>-->
 		<!--<module>springboot-project-admin-client</module>-->
 		<!--<module>springboot-project-mybatis</module>-->
-		<module>springboot-project-dao-config</module>
-		<module>springboot-project-dao-annotation</module>
-		<module>springboot-project-redis</module>
-    <module>jwtspringbootstarter</module>
+		<!--<module>springboot-project-dao-config</module>-->
+		<!--<module>springboot-project-dao-annotation</module>-->
+		<!--<module>springboot-project-redis</module>-->
+    <!--<module>jwtspringbootstarter</module>-->
+		<module>springboot-project-multi-datasource</module>
   </modules>
 </project>
