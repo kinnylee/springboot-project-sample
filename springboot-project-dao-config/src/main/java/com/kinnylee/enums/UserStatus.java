@@ -1,11 +1,13 @@
 package com.kinnylee.enums;
 
+import org.springframework.beans.factory.annotation.Value;
+
 /**
  *
  * @author lijl-c
  * @date 2018/10/24
  */
-public enum UserStatus {
+public enum UserStatus implements BaseEnum {
 
   /**
    * 不可用
@@ -23,6 +25,7 @@ public enum UserStatus {
     this.value = value;
   }
 
+  @Override
   public int getValue(){
     return this.value;
   }
