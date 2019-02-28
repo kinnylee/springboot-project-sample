@@ -8,9 +8,9 @@
   <version>0.0.1</version>
 
   <parent>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.0.6.RELEASE</version>
+    <groupId>com.kinnylee</groupId>
+    <artifactId>springboot-project-parent</artifactId>
+    <version>0.0.1</version>
   </parent>
 
   <properties>
